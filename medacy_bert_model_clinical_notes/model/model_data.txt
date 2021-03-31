@@ -1,0 +1,37 @@
+A custom pipeline configured from a JSON file
+
+Report created at Tue Mar 30 05:08:17 2021
+
+MedaCy Version: 1.0.1
+SpaCy Version: 2.3.5
+SpaCy Model: core_web_sm, version 2.3.1
+Entities: ['Reason', 'Dosage', 'Route', 'Frequency', 'ADE', 'Form', 'Duration', 'Drug', 'Strength']
+Constructor arguments: {}
+
+Feature Overlayers:
+
+<class 'medacy.pipeline_components.feature_overlayers.metamap.metamap_all_types_component.MetaMapAllTypesOverlayer'> at /work/opt/lib/python/lib/python3.9/site-packages/medacy/pipeline_components/feature_overlayers/metamap/metamap_all_types_component.py
+cuis = True
+merge_tokens = False
+
+Feature Extractor: TextExtractor at /work/opt/lib/python/lib/python3.9/site-packages/medacy/pipeline_components/feature_extractors/text_extractor.py
+Window Size: 0
+SpaCy Features: []
+Learner: BERT at /work/opt/lib/python/lib/python3.9/site-packages/medacy/pipeline_components/learners/bert_learner.py
+Tokenizer: SystematicReviewTokenizer at /work/opt/lib/python/lib/python3.9/site-packages/medacy/pipeline_components/tokenizers/systematic_review_tokenizer.py
+
+Pipeline configured from a JSON: {"learner": "BERT", "spacy_pipeline": "en_core_web_sm", "tokenizer": "systematic_review", "metamap": "/work/app/meta-map/bin", "semantic_types": "all"}
+JSON path: conf/bert.json
+
+| Entity (Count)    |   Precision |   Recall |    F1 |   F1_Min |   F1_Max |
+|-------------------+-------------+----------+-------+----------+----------|
+| ADE (1584)        |       0.562 |    0.301 | 0.381 |    0.216 |    0.457 |
+| Dosage (6902)     |       0.942 |    0.953 | 0.948 |    0.939 |    0.958 |
+| Drug (26800)      |       0.904 |    0.891 | 0.897 |    0.891 |    0.904 |
+| Duration (970)    |       0.833 |    0.821 | 0.825 |    0.779 |    0.862 |
+| Form (11010)      |       0.93  |    0.941 | 0.936 |    0.924 |    0.954 |
+| Frequency (10293) |       0.873 |    0.966 | 0.917 |    0.908 |    0.926 |
+| Reason (6400)     |       0.663 |    0.528 | 0.586 |    0.563 |    0.612 |
+| Route (8989)      |       0.933 |    0.924 | 0.928 |    0.916 |    0.939 |
+| Strength (10921)  |       0.948 |    0.958 | 0.953 |    0.945 |    0.957 |
+| system (83869)    |       0.893 |    0.9   | 0.895 |    0.889 |    0.901 |
